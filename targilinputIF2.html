@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Username
+    <input id="userName" type="text"><br>
+    password
+    <input type="text" id="password"><br>
+    <div id="display"></div>
+    <input type="submit" onclick="checkIfOk()">
+    <script>
+        function checkIfOk(){
+            var userNameValue = document.getElementById("userName").value;
+            var passwordValue = document.getElementById("password").value;
+
+           var checkIfuserName = userNameValue === "Gil" ;
+           var checkIfPasswordName = passwordValue === "Yasur" ;
+
+           var displayElement = document.getElementById("display");
+
+
+       
+            if (checkIfuserName && checkIfPasswordName) {
+                displayElement.innerHTML = "Ok"
+            } else {
+                displayElement.innerHTML = "Not Correct"
+            }
+        }
+
+             // let res = age.value > 17 && age.value < 81 && "OK"
+            // display.innerHTML = checkIfuserName && checkIfPasswordName && "OK"
+            // console.log(age.value > 17 && age.value < 81 && "OK" );
+    </script>
+
+</body>
+</html>
